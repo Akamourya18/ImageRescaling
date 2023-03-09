@@ -1,0 +1,109 @@
+  body {
+      background-image: url('background.jpeg');
+      font-family: Cabin;
+  }
+  
+  h1 {
+      color: white;
+      font-family: Girassol;
+      font-size: 50px;
+      text-align: center;
+      margin-top: 35px;
+  }
+  
+  h3 {
+      color: white;
+      font-family: Lato;
+      font-size: 22;
+      text-align: center;
+      margin: 8px;
+  }
+  
+  #homeform {
+      background-color: rgba(59, 84, 95, 0.322);
+      border-radius: 10px;
+      max-width: 800px;
+      width: 90%;
+      align-self: center;
+      margin: auto;
+      font-size: 25;
+      color: white;
+  }
+  
+  #homeform tr {
+      padding: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      align-self: center;
+      align-items: center;
+  }
+  
+  #homeform td {
+      width: 310px;
+      align-self: center;
+      margin: auto;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      text-align: center;
+  }
+  
+  img {
+      image-rendering: pixelated;
+      margin: 5px;
+      border: 1px solid black;
+  }
+  
+  .imgbox {
+      display: inline-block;
+      border: solid rgba(223, 213, 213, 0.61) 1px;
+      border-radius: 5px;
+      background-color: rgba(161, 159, 189, 0.795);
+      margin: 8px;
+      align-items: center;
+  }
+  
+  .imgbox:hover {
+      cursor: pointer;
+  }
+  
+  a {
+      color: black;
+  }
+  
+  figcaption {
+      text-align: center;
+      padding: 5px;
+  }
+  
+  #images {
+      display: flex;
+      align-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-left: 1.5vw;
+      padding-right: 1.5vw;
+      margin: auto;
+  }
+  
+  input[type=submit] {
+      background-color: #4CAF50;
+      font-size: 20;
+      border-radius: 30px;
+      font-family: Cabin;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 10px;
+      cursor: pointer;
+  }
+  
+  select,
+  input[type=file] {
+      font-family: inherit;
+      background-color: rgba(240, 248, 255, 0.534);
+      border-radius: 0.5vw;
+      width: 100%;
+      font-size: 18;
+      padding: 0.5vw;
+  }

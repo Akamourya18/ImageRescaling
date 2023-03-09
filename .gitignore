@@ -1,0 +1,6 @@
+__pycache__
+env
+static/bicubic/
+static/compressed/
+static/original/
+static/upscaled/
