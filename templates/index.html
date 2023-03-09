@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <title>Image Rescaling Tool</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+      <link href="https://fonts.googleapis.com/css?family=Girassol" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+  <h1>Efficient Image Rescaling</h1>
+  <form action="" method="POST" enctype="multipart/form-data">
+    <table id="homeform">
+      <tr>
+        <td> Image File</td>
+        <td> <input type="file" name="file" required /></td>
+      </tr>
+      <tr>
+        <td>Rescaling Algorithm</td>
+        <td>
+          <select name="algo" required>
+            <option value="" disabled selected>SELECT ALGORITHM</option>
+            <option value="srcnn">SRCNN</option>
+            <option value="vdsr">VDSR</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Scaling Factor</td>
+        <td>
+          <select name="factor" required>
+            <option value="" disabled selected>SELECT SCALING FACTOR</option>
+            <option value="2x">2x</option>
+            <option value="4x">4x</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+    <center><input type="submit" value="Submit"></center>
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Image Rescaling Tool</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+    <link href="https://fonts.googleapis.com/css?family=Girassol" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <h1>Efficient Image Rescaling</h1>
+    <h3>Algorithm: {{algo}}</h3>
+    <h3>Scaling Factor: {{scale}}</h3>
+    <div id="images">
+        <a href="{{url_for('static', filename=original)}}" target="blank">
+            <div class="imgbox">
+                <img src="{{url_for('static', filename=original)}}" width="{{[256, ([w_original|int, 320]|min)]|max}}" />
+                <figcaption>
+                    <b>Original</b><br/>{{w_original}} x {{h_original}}
+                    <br /><br />
+                </figcaption>
+            </div>
+        </a>
+
+        <a href="{{url_for('static', filename=compressed)}}" target="blank">
+            <div class="imgbox">
+                <img src="{{url_for('static', filename=compressed)}}" width="{{([256, ([w_original|int, 320]|min)]|max)/(scale|int)}}" />
+                <figcaption>
+                    <b>Compressed</b><br />{{w_compressed}} x {{h_compressed}}
+                    <br /><br />
+                </figcaption>
+            </div>
+        </a>
+
+        <a href="{{url_for('static', filename=bicubic)}}" target="blank">
+            <div class="imgbox">
+                <img src="{{url_for('static', filename=bicubic)}}" width="{{[256, ([w_original|int, 320]|min)]|max}}" />
+                <figcaption>
+                    <b>Bicubic</b><br />{{w_original}} x {{h_original}}<br /> <b>PSNR:</b> {{psnr_bicubic}}<br /> <b>SSIM:</b> {{ssim_bicubic}}
+                </figcaption>
+            </div>
+        </a>
+
+        <a href="{{url_for('static', filename=upscaled)}}" target="blank">
+            <div class="imgbox">
+                <img src="{{url_for('static', filename=upscaled)}}" width="{{[256, ([w_original|int, 320]|min)]|max}}" />
+                <figcaption>
+                    <b>Super Resolved</b><br />{{w_original}} x {{h_original}}<br/> <b>PSNR:</b> {{psnr_upscaled}}<br/> <b>SSIM:</b> {{ssim_upscaled}}
+                </figcaption>
+            </div>
+        </a>
+    </div>
+
+</body>
+
+</html>
